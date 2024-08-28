@@ -6,43 +6,20 @@ pergunta4 = str (input("Devia para a vitima?"))
 pergunta5 = str (input("Já trabalhou com a vitima?"))
 sim = 0
 if (pergunta1 == "sim"):
-    sim += 1
-    if (pergunta2 == "sim"):
-        sim +=1
-        if (pergunta3 == "sim"):
-            sim+=1
-            if (pergunta4 == "sim"):
-                sim+=1
-                if (pergunta5 == "sim"):
-                    sim+=1
-elif (pergunta2 == "sim"):
     sim +=1
-    if (pergunta3 == "sim"):
-        sim+=1
-        if (pergunta4 == "sim"):
-            sim+=1
-            if (pergunta5 == "sim"):
-                sim+=1
-elif (pergunta3 == "sim"):
+if (pergunta2 == "sim"):
+    sim +=1
+if (pergunta3 == "sim"):
     sim+=1
-    if (pergunta4 == "sim"):
-        sim+=1
-        if (pergunta5 == "sim"):
-            sim+=1
-elif (pergunta4 == "sim"):
+if (pergunta4 == "sim"):
     sim+=1
-    if (pergunta5 == "sim"):
-        sim+=1
-elif (pergunta5 == "sim"):
+if (pergunta5 == "sim"):
     sim+=1
-else:
-    print("Inocente")
-if sim == 1:
+if sim <=1:
     print ("Inocente")
 elif sim ==2:
     print("Suspeita")
-elif sim >=3 and sim <=4:
+elif sim ==3 or sim ==4:
     print ("Cúmplice")
 elif sim >4:
     print ("Assassino")
-print (sim)
